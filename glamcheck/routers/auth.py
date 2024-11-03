@@ -13,10 +13,14 @@ auth_router = APIRouter(prefix="/auth", tags=["auth"])
 async def login(form: LoginFormModel, jwt_service: JwtServiceDep, db_session: DbSessionDep) -> TokensResponseModel:
     return {"Hello": "World"}
 
+
 @auth_router.post("/logout")
-async def logout(access_token: UncheckedAccessToken, refresh_token: UncheckedRefreshToken, jwt_service: JwtServiceDep, db_session: DbSessionDep) -> DetailResponseModel:
+async def logout(access_token: UncheckedAccessToken, refresh_token: UncheckedRefreshToken, jwt_service: JwtServiceDep,
+                 db_session: DbSessionDep) -> DetailResponseModel:
     return {"Hello": "World"}
 
+
 @auth_router.post("/refresh")
-async def refresh(refresh_token: ValidRefreshToken, jwt_service: JwtServiceDep, db_session: DbSessionDep) -> TokensResponseModel:
+async def refresh(refresh_token: ValidRefreshToken, jwt_service: JwtServiceDep,
+                  db_session: DbSessionDep) -> TokensResponseModel:
     return {"Hello": "World"}

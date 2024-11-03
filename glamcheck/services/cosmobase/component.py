@@ -10,11 +10,11 @@ from naturalness import Naturalness
 
 
 class Component(BaseModel):
-    traditional_title: str # Добавить ограничения на длину?
-    latin_title: str # Добавить ограничения на длину?
-    inci_title: str # Добавить ограничения на длину?
+    traditional_title: str  # Добавить ограничения на длину?
+    latin_title: str  # Добавить ограничения на длину?
+    inci_title: str  # Добавить ограничения на длину?
     url: str  # Добавить ограничения на длину?
-    categories: list[str] # Добавить ограничения на длину?
+    categories: list[str]  # Добавить ограничения на длину?
     cosmetic_properties: list[CosmeticProperty]
     additional_properties: list[AdditionalProperty]
     aliases: list[str]  # Добавить ограничения на длину?
@@ -23,4 +23,4 @@ class Component(BaseModel):
     danger_factor: Optional[DangerFactor]
     naturalness: Optional[Naturalness]
     hlb_value: Optional[float]
-    comment: Optional[str] # Добавить ограничения на длину?
+    comment: Optional[str]  # Добавить ограничения на длину?

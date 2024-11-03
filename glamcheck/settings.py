@@ -1,10 +1,9 @@
 from typing import Annotated
 
-from pydantic import Field
+from pydantic import Field, PositiveInt
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 SecretKey = Annotated[str, Field(min_length=64)]
-PositiveInt = Annotated[int, Field(gt=0)]
 
 
 class Settings(BaseSettings):

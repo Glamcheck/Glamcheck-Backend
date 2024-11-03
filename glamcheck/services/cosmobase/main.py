@@ -4,18 +4,18 @@ from urllib.parse import quote
 import bs4
 import requests
 
-from danger_factor_type import DangerFactorType
 from additional_property import AdditionalProperty
 from component import Component
 from cosmetic_property import CosmeticProperty
 from danger_factor import DangerFactor
+from danger_factor_type import DangerFactorType
 from input_percentage import InputPercentage
 from naturalness import Naturalness
 
 
 def parse_titles(soup: bs4.BeautifulSoup) -> tuple[str, str, str]:
     # Add exceptions handling
-    tags: bs4.ResultSet  = soup.select('div.componentName')
+    tags: bs4.ResultSet = soup.select('div.componentName')
     return tags[0].text, tags[1].text, tags[2].text
 
 
@@ -106,7 +106,8 @@ def parse_aliases(soup: bs4.BeautifulSoup) -> list[str]:
 def parse_skin_types(soup: bs4.BeautifulSoup) -> list[str]:
     # Add exceptions handling
 
-    label_tag: Optional[bs4.Tag] = soup.find(lambda tag: tag.name == "label" and "Эффективен для типов кожи" in tag.text)
+    label_tag: Optional[bs4.Tag] = soup.find(
+        lambda tag: tag.name == "label" and "Эффективен для типов кожи" in tag.text)
     has_skin_types: bool = label_tag is not None
 
     if not has_skin_types:
@@ -124,7 +125,8 @@ def parse_skin_types(soup: bs4.BeautifulSoup) -> list[str]:
 def parse_recommended_input_percentage(soup: bs4.BeautifulSoup) -> Optional[InputPercentage]:
     # Add exceptions handling
 
-    label_tag: Optional[bs4.Tag] = soup.find(lambda tag: tag.name == "label" and "Рекомендуемый процент ввода" in tag.text)
+    label_tag: Optional[bs4.Tag] = soup.find(
+        lambda tag: tag.name == "label" and "Рекомендуемый процент ввода" in tag.text)
     has_recommended_input_percentage: bool = label_tag is not None
 
     if not has_recommended_input_percentage:
