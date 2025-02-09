@@ -2,5 +2,5 @@ from enum import Enum
 
 
 class Gender(Enum):
-    ACCESS = "male"
-    REFRESH = "female"
+    MALE = "male"
+    FEMALE = "female"

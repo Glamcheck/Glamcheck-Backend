@@ -1,3 +1,6 @@
 from fastapi import APIRouter
 
-composition_router = APIRouter(prefix="/composition", tags=["composition"])
+
+@composition_router.post("/")
+async def create_user(form: RegistrationFormModel):
+    return {"Hello": "World"}
