@@ -1,4 +1,3 @@
-from .auth import auth_router
+__all__ = ["composition_router"]
+
 from .composition import composition_router
-from .recommendation import recommendation_router
-from .user import user_router

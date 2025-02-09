@@ -88,14 +88,14 @@ class JwtService:
 
     @staticmethod
     def __encode_jwt(
-            sub: str, expires_delta: timedelta, secret_key: str, algorithm: str
+        sub: str, expires_delta: timedelta, secret_key: str, algorithm: str
     ) -> str:
         expire: datetime = datetime.now(tz=timezone.utc) + expires_delta
         payload: dict[str, Any] = {"exp": expire, "sub": sub}
         return jwt.encode(payload=payload, key=secret_key, algorithm=algorithm)
 
     def __decode_jwt(
-            self, token: str, secret_key: str, algorithm: str
+        self, token: str, secret_key: str, algorithm: str
     ) -> dict[str, Any]:
         try:
             return jwt.decode(
