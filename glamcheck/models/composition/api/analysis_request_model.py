@@ -1,6 +1,6 @@
 from pydantic import Field, BaseModel
 
-from .analysis_settings import AnalysisSettingsModel
+from .analysis_settings_model import AnalysisSettingsModel
 
 
 class AnalysisRequestModel(BaseModel):

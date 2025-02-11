@@ -8,10 +8,10 @@ __all__ = [
     "NaturalnessType",
 ]
 
-from .additional_property import AdditionalPropertyModel
-from .component import ComponentModel
-from .cosmetic_property import CosmeticPropertyModel
-from .danger_factor import DangerFactorModel
+from .additional_property_model import AdditionalPropertyModel
+from .component_model import ComponentModel
+from .cosmetic_property_model import CosmeticPropertyModel
+from .danger_factor_model import DangerFactorModel
 from .danger_factor_type import DangerFactorType
-from .input_percentage import InputPercentageModel
+from .input_percentage_model import InputPercentageModel
 from .naturalness_type import NaturalnessType

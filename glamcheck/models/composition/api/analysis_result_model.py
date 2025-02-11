@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
-from .range_additional_property import RangeAdditionalPropertyModel
-from .range_cosmetic_property import RangeCosmeticPropertyModel
+from .range_additional_property_model import RangeAdditionalPropertyModel
+from .range_cosmetic_property_model import RangeCosmeticPropertyModel
 from glamcheck.models.composition.domain import NaturalnessType, DangerFactorModel
 
 

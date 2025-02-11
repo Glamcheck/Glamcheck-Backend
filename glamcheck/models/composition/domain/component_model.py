@@ -2,10 +2,10 @@ from typing import Optional
 
 from pydantic import BaseModel
 
-from .additional_property import AdditionalPropertyModel
-from .cosmetic_property import CosmeticPropertyModel
-from .danger_factor import DangerFactorModel
-from .input_percentage import InputPercentageModel
+from .additional_property_model import AdditionalPropertyModel
+from .cosmetic_property_model import CosmeticPropertyModel
+from .danger_factor_model import DangerFactorModel
+from .input_percentage_model import InputPercentageModel
 from .naturalness_type import NaturalnessType
 
 
